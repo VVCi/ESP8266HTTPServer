@@ -1,4 +1,8 @@
 
+//@Author: EPCB TECH
+//@Date: 2020
+//@Description: ESP8266 With ThingSpeak Server
+
 #include "ThingSpeak.h"
 #include <ESP8266WiFi.h>
 
