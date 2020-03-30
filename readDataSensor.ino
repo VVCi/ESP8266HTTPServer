@@ -6,17 +6,17 @@
 #include "ThingSpeak.h"
 #include <ESP8266WiFi.h>
 
-const char ssid[] = "SSID";  // your network SSID (name)
-const char password[] = "password";   // your network password         
+const char ssid[] 		= "SSID";  		// your network SSID (name)
+const char password[] 	= "PASSWORD";   // your network password         
 WiFiClient  client;
 
 //---------Channel Details---------//
-unsigned long counterChannelNumber	= 12345678;            	// Channel ID
+unsigned long counterChannelNumber	= 12345678;         // Channel ID
 const char * myCounterReadAPIKey 	= "READ API KEY"; 	// Read API Key
-const int FieldNumber1 				= 1;  		// The field you wish to read
+const int FieldNumber1 				= 1;  				// The field you wish to read
 const int FieldNumber2 				= 2;
 const int FieldNumber3 				= 3;  
-//-------------------------------//
+
 float statusCode;
 
 void setup()
@@ -55,7 +55,6 @@ void readData(){
     Serial.println("Unable to read channel / No internet connection");
   }
   delay(50);
-  //-------------- End of Channel 1 -------------//
 
   //---------------- Channel 2 ----------------//
   float humidity 	= ThingSpeak.readLongField(counterChannelNumber, FieldNumber2, myCounterReadAPIKey);
@@ -72,7 +71,6 @@ void readData(){
     Serial.println("Unable to read channel / No internet connection");
   }
   delay(100);
-  //-------------- End of Channel 3 -------------//
   
   //---------------- Channel 3 ----------------//
   float moist	= ThingSpeak.readLongField(counterChannelNumber, FieldNumber2, myCounterReadAPIKey);
@@ -89,7 +87,6 @@ void readData(){
     Serial.println("Unable to read channel / No internet connection");
   }
   delay(100);
-  //-------------- End of Channel 3 -------------//	
 }
 
 void logoConsole(void) {
