@@ -6,8 +6,8 @@
 #include "ThingSpeak.h"
 #include <ESP8266WiFi.h>
 
-const char ssid[] 		= "SSID";  		// your network SSID (name)
-const char password[] 	= "PASSWORD";   // your network password         
+const char ssid[]		= "SSID";  		// your network SSID (name)
+const char password[]	= "PASSWORD";   // your network password         
 WiFiClient  client;
 
 //---------Channel Details---------//
@@ -37,7 +37,6 @@ void loop()
 {
 	readData();
 }
-
 
 void readData(){
 	//---------------- Channel 1 ----------------//

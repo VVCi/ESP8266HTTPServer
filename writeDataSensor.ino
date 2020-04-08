@@ -1,7 +1,7 @@
 
 //@Author: EPCB TECH
 //@Date: 2020
-//@Description: ESP8266 With ThingSpeak Server
+//@Description: ESP8266 With ThingSpeak 
 
 #include <DHT.h>
 #include <ESP8266WiFi.h>
@@ -88,8 +88,8 @@ void readSensor(void) {
 }
 
 float getMoist() {
-  float i 			= 0;
-  float anaValue	= 0;
+  float i = 0;
+  float anaValue = 0;
   for (i = 0; i < 10; i++)  
   {
     anaValue += analogRead(SOIL_MOIST_1_PIN);
